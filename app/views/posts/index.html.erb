@@ -19,8 +19,7 @@
         <p>詳細：<%= @author.description %></p>
       </div>
       <div class="list_group">
-        <% @new_posts.each_with_index do |post, index| %>
--       <% break if index >= 5 %>
+        <% @new_posts.each do |post| %>
         <%= link_to post.title, post, class: "list-group-item" %>
         <%end%>
       </div>
